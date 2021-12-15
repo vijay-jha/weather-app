@@ -48,6 +48,8 @@ const temperatureValue = document.querySelector("#temperature-value");
 const icon = document.querySelector("#icon");
 const myVideo = document.querySelector("#myVideo");
 const weatherContainer = document.querySelector("#weather-box");
+const celsius = document.querySelector("#celsius");
+const fahrenhite = document.querySelector("#fahrenhite");
 
 // EventListeners
 search.addEventListener("keydown", (e) => {
@@ -56,6 +58,37 @@ search.addEventListener("keydown", (e) => {
     if (value != "") searchWeather(value);
     e.target.value = "";
   }
+});
+
+celsius.style.pointerEvents = 'none';
+fahrenhite.classList.add('dull');
+
+fahrenhite.addEventListener("click", () => {
+  let x = parseInt(temperatureValue.innerHTML);
+  x = Math.round(((x * 9/5) + 32));
+  temperatureValue.innerHTML = x.toString();
+  fahrenhite.style.pointerEvents = 'none';
+  celsius.style.pointerEvents = 'auto';
+  //(0°C × 9/5) + 32 = 32°F
+  if(fahrenhite.classList.contains("dull")){
+    fahrenhite.classList.remove("dull");
+  }
+  // fahrenhite.classList.add("bright");
+  celsius.classList.add("dull");
+});
+
+celsius.addEventListener("click", () => {
+  let x = parseInt(temperatureValue.innerHTML);
+  x = Math.round(((x - 32) * 5/9));
+  temperatureValue.innerHTML = x.toString();
+  celsius.style.pointerEvents = 'none';
+  fahrenhite.style.pointerEvents = 'auto';
+  // (32°F − 32) × 5/9 = 0°C
+  if(celsius.classList.contains("dull")){
+    celsius.classList.remove("dull");
+  }
+  // celsius.classList.add("bright");
+  fahrenhite.classList.add("dull");
 });
 
 function searchWeather(value) {
@@ -87,7 +120,7 @@ function showWeatherDetails(data) {
 
 function setWeatherBox(rgbaColor, color) {
   weatherContainer.style.backgroundColor = rgbaColor;
-  weatherContainer.style.border = `2px solid $color`;
+  weatherContainer.style.border = `2px solid ${color}`;
   weatherContainer.style.color = color;
 }
 
@@ -95,7 +128,10 @@ function getBackgroundWeather(id, icon) {
   setWeatherBox("rgba(176, 230, 225, 0.7)", "black");
   
   if (id == 800) {
-    if (icon[2] == "n") return videoSource[0].source; // night
+    if (icon[2] == "n") {
+      setWeatherBox("rgba(0, 0, 0, 0.7)", "white")
+      return videoSource[0].source;
+    } // night
     return videoSource[4].source;
   }
   id = Math.round(id / 100);

@@ -94,3 +94,11 @@ video {
 #time {
   font-size: 2rem;
 }
+
+.bright {
+  color: black;
+}
+
+.dull {
+  color: grey;
+}
