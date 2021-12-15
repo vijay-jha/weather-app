@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#input-container input {
+  padding: 1%;
+  font-size: 1rem;
+  width: 15rem;
+  border: 2px solid transparent;
+  outline: 0;
+  border-radius: 1rem;
+}
+
+#input-container input:focus {
+  border: 2px solid aqua;
+}
+
+#weather-container {
+  display: flex;
+  justify-content: center;
+}
+
+#weather-box {
+  height: 65vh;
+  width: 30%;
+  min-width: 300px; /* Just trying */
+  border: 2px solid black;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+#temperature {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 5rem;
+}
+
+#celsius,
+#fahrenhite {
+  font-size: 2rem;
+  vertical-align: super;
+  cursor: pointer;
+}
+
+#icon-and-info {
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-gap: 2%;
+}
+
+#icon {
+  width: 100%;
+}
+
+#info {
+  vertical-align: center;
+  margin: auto;
+  font-size: 1.4rem;
+}
+
+/* #humidity, #wind-speed, #place, #time {
+  color: white;
+} */
+
+#place , #time {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#place {
+  font-size: 3rem;
+}
+
+#time {
+  font-size: 2rem;
+}
