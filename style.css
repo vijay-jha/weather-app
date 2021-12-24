@@ -77,10 +77,6 @@ video {
   font-size: 1.4rem;
 }
 
-/* #humidity, #wind-speed, #place, #time {
-  color: white;
-} */
-
 #place , #time {
   display: flex;
   justify-content: center;
@@ -93,6 +89,17 @@ video {
 
 #time {
   font-size: 2rem;
+}
+
+#reference {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  margin-right: 1rem;
+}
+
+a:active, a:link, a:visited {
+  color: white;
 }
 
 .bright {

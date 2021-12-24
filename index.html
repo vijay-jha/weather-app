@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WEATHER APP</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body onload="searchWeather('pune')">
-    <video muted autoplay loop id="myVideo" src="">
-      <!-- <source src="./assets/bg-videos/raining.mp4" type="video/mp4" /> -->
-      <!-- <source src="./assets/bg-videos/evening-clouds.mp4" type="video/mp4" /> -->
-      <!-- <source src="./assets/bg-videos/night.mp4" type="video/mp4" /> -->
-      <!-- <source src="./assets/bg-videos/sunny-sky.mp4" type="video/mp4" /> -->
-      <!-- <source src="./assets/bg-videos/clear  -sky.mp4" type="video/mp4" /> -->
-    </video>
-    <div id="input-container">
-      <input type="text" placeholder="Search" id="search" autocomplete="off" />
-    </div>
 
-    <div id="weather-container">
-      <div id="weather-box">
-        <div id="temperature">
-          <span id="temperature-value"></span>
-          <span id="celsius">°C</span>
-          <span style="font-size: 2rem; vertical-align: super">|</span>
-          <span id="fahrenhite">°F</span>
-        </div>
-        <div id="icon-and-info">
-          <img src="" alt="" id="icon" />
-          <div id="info">
-            <p id="humidity"></p>
-            <p id="wind-speed"></p>
-          </div>
-        </div>
-        <div id="place"></div>
-        <div id="time"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEATHER APP</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body onload="searchWeather('pune')">
+  <video muted autoplay loop id="myVideo" src=""></video>
+  <div id="input-container">
+    <input type="text" placeholder="Search" id="search" autocomplete="off" />
+  </div>
+
+  <div id="weather-container">
+    <div id="weather-box">
+      <div id="temperature">
+        <span id="temperature-value"></span>
+        <span id="celsius">°C</span>
+        <span style="font-size: 2rem; vertical-align: super">|</span>
+        <span id="fahrenhite">°F</span>
       </div>
+      <div id="icon-and-info">
+        <img src="" alt="" id="icon" />
+        <div id="info">
+          <p id="humidity"></p>
+          <p id="wind-speed"></p>
+        </div>
+      </div>
+      <div id="place"></div>
+      <div id="time"></div>
     </div>
-    <script src="./script.js"></script>
-  </body>
+  </div>
+  <div id="reference">
+    <a href="https://openweathermap.org/" target="blank">
+      <p>~ By openweathermap</p>
+    </a>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
