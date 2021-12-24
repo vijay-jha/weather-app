@@ -65,12 +65,12 @@ fahrenhite.classList.add('dull');
 
 fahrenhite.addEventListener("click", () => {
   let x = parseInt(temperatureValue.innerHTML);
-  x = Math.round(((x * 9/5) + 32));
+  x = Math.round(((x * 9 / 5) + 32));
   temperatureValue.innerHTML = x.toString();
   fahrenhite.style.pointerEvents = 'none';
   celsius.style.pointerEvents = 'auto';
   //(0°C × 9/5) + 32 = 32°F
-  if(fahrenhite.classList.contains("dull")){
+  if (fahrenhite.classList.contains("dull")) {
     fahrenhite.classList.remove("dull");
   }
   // fahrenhite.classList.add("bright");
@@ -79,12 +79,12 @@ fahrenhite.addEventListener("click", () => {
 
 celsius.addEventListener("click", () => {
   let x = parseInt(temperatureValue.innerHTML);
-  x = Math.round(((x - 32) * 5/9));
+  x = Math.round(((x - 32) * 5 / 9));
   temperatureValue.innerHTML = x.toString();
   celsius.style.pointerEvents = 'none';
   fahrenhite.style.pointerEvents = 'auto';
   // (32°F − 32) × 5/9 = 0°C
-  if(celsius.classList.contains("dull")){
+  if (celsius.classList.contains("dull")) {
     celsius.classList.remove("dull");
   }
   // celsius.classList.add("bright");
@@ -126,7 +126,7 @@ function setWeatherBox(rgbaColor, color) {
 
 function getBackgroundWeather(id, icon) {
   setWeatherBox("rgba(176, 230, 225, 0.7)", "black");
-  
+
   if (id == 800) {
     if (icon[2] == "n") {
       setWeatherBox("rgba(0, 0, 0, 0.7)", "white")
