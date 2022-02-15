@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WEATHER APP</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-
-<body onload="searchWeather('delhi')">
-  <video muted autoplay loop id="myVideo" src=""></video>
-  <div id="input-container">
-    <input type="text" placeholder="Search" id="search" autocomplete="off" />
-  </div>
-
-  <div id="weather-container">
-    <div id="weather-box">
-      <div id="temperature">
-        <span id="temperature-value"></span>
-        <span id="celsius">°C</span>
-        <span style="font-size: 2rem; vertical-align: super">|</span>
-        <span id="fahrenhite">°F</span>
-      </div>
-      <div id="icon-and-info">
-        <img src="" alt="" id="icon" />
-        <div id="info">
-          <p id="humidity"></p>
-          <p id="wind-speed"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body onload="searchWeather('pune')">
+    <video muted autoplay loop id="myVideo" src=""> </video>
+    <div id="input-container">
+      <input type="text" placeholder="Search" id="search" autocomplete="off" />
+    </div>
+  
+    <div id="weather-container">
+      <div id="weather-box">
+        <div id="temperature">
+          <span id="temperature-value"></span>
+          <span id="celsius">°C</span>
+          <span style="font-size: 2rem; vertical-align: super">|</span>
+          <span id="fahrenhite">°F</span>
+        </div>
+        <div id="icon-and-info">
+          <img src="" id="icon" />
+          <div id="info">
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+          </div>
         </div>
       </div>
+      <br>
       <div id="place"></div>
-      <div id="time"></div>
     </div>
   </div>
   <div id="reference">
